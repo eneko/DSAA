@@ -11,6 +11,8 @@
 		958F040B1C69AF9A0068E855 /* DSAA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958F04001C69AF9A0068E855 /* DSAA.framework */; };
 		958F041B1C69AFDD0068E855 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041A1C69AFDD0068E855 /* Stack.swift */; };
 		958F041F1C69B0080068E855 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041E1C69B0080068E855 /* StackTests.swift */; };
+		958F04211C69B8370068E855 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04201C69B8370068E855 /* Heap.swift */; };
+		958F04231C69C6C60068E855 /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04221C69C6C60068E855 /* HeapTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		958F04111C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958F041A1C69AFDD0068E855 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = DataStructures/Stack.swift; sourceTree = "<group>"; };
 		958F041E1C69B0080068E855 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackTests.swift; path = DataStructures/StackTests.swift; sourceTree = "<group>"; };
+		958F04201C69B8370068E855 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Heap.swift; path = DataStructures/Heap.swift; sourceTree = "<group>"; };
+		958F04221C69C6C60068E855 /* HeapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapTests.swift; path = DataStructures/HeapTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				958F041A1C69AFDD0068E855 /* Stack.swift */,
+				958F04201C69B8370068E855 /* Heap.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				958F041E1C69B0080068E855 /* StackTests.swift */,
+				958F04221C69C6C60068E855 /* HeapTests.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958F041B1C69AFDD0068E855 /* Stack.swift in Sources */,
+				958F04211C69B8370068E855 /* Heap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958F041F1C69B0080068E855 /* StackTests.swift in Sources */,
+				958F04231C69C6C60068E855 /* HeapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +407,7 @@
 				958F04161C69AF9A0068E855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		958F04171C69AF9A0068E855 /* Build configuration list for PBXNativeTarget "DSAATests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +416,7 @@
 				958F04191C69AF9A0068E855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
