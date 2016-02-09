@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		958F04041C69AF9A0068E855 /* DSAA.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F04031C69AF9A0068E855 /* DSAA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		958F040B1C69AF9A0068E855 /* DSAA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958F04001C69AF9A0068E855 /* DSAA.framework */; };
-		958F04101C69AF9A0068E855 /* DSAATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F040F1C69AF9A0068E855 /* DSAATests.swift */; };
+		958F041B1C69AFDD0068E855 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041A1C69AFDD0068E855 /* Stack.swift */; };
+		958F041F1C69B0080068E855 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041E1C69B0080068E855 /* StackTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		958F04031C69AF9A0068E855 /* DSAA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAA.h; sourceTree = "<group>"; };
 		958F04051C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958F040A1C69AF9A0068E855 /* DSAATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSAATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		958F040F1C69AF9A0068E855 /* DSAATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAATests.swift; sourceTree = "<group>"; };
 		958F04111C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958F041A1C69AFDD0068E855 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = DataStructures/Stack.swift; sourceTree = "<group>"; };
+		958F041E1C69B0080068E855 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackTests.swift; path = DataStructures/StackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		958F04021C69AF9A0068E855 /* DSAA */ = {
 			isa = PBXGroup;
 			children = (
+				958F041C1C69AFE00068E855 /* DataStructures */,
 				958F04031C69AF9A0068E855 /* DSAA.h */,
 				958F04051C69AF9A0068E855 /* Info.plist */,
 			);
@@ -80,10 +83,26 @@
 		958F040E1C69AF9A0068E855 /* DSAATests */ = {
 			isa = PBXGroup;
 			children = (
-				958F040F1C69AF9A0068E855 /* DSAATests.swift */,
+				958F041D1C69AFEE0068E855 /* DataStructures */,
 				958F04111C69AF9A0068E855 /* Info.plist */,
 			);
 			path = DSAATests;
+			sourceTree = "<group>";
+		};
+		958F041C1C69AFE00068E855 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				958F041A1C69AFDD0068E855 /* Stack.swift */,
+			);
+			name = DataStructures;
+			sourceTree = "<group>";
+		};
+		958F041D1C69AFEE0068E855 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				958F041E1C69B0080068E855 /* StackTests.swift */,
+			);
+			name = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958F041B1C69AFDD0068E855 /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958F04101C69AF9A0068E855 /* DSAATests.swift in Sources */,
+				958F041F1C69B0080068E855 /* StackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +328,7 @@
 		958F04151C69AF9A0068E855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +339,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.enekoalonso.DSAA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		958F04161C69AF9A0068E855 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
