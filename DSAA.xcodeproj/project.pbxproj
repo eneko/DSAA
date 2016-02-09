@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		958F04041C69AF9A0068E855 /* DSAA.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F04031C69AF9A0068E855 /* DSAA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		958F040B1C69AF9A0068E855 /* DSAA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958F04001C69AF9A0068E855 /* DSAA.framework */; };
+		958F04101C69AF9A0068E855 /* DSAATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F040F1C69AF9A0068E855 /* DSAATests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		958F040C1C69AF9A0068E855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 958F03F71C69AF9A0068E855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 958F03FF1C69AF9A0068E855;
+			remoteInfo = DSAA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		958F04001C69AF9A0068E855 /* DSAA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSAA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		958F04031C69AF9A0068E855 /* DSAA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAA.h; sourceTree = "<group>"; };
+		958F04051C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958F040A1C69AF9A0068E855 /* DSAATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSAATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		958F040F1C69AF9A0068E855 /* DSAATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAATests.swift; sourceTree = "<group>"; };
+		958F04111C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		958F03FC1C69AF9A0068E855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		958F04071C69AF9A0068E855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958F040B1C69AF9A0068E855 /* DSAA.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		958F03F61C69AF9A0068E855 = {
+			isa = PBXGroup;
+			children = (
+				958F04021C69AF9A0068E855 /* DSAA */,
+				958F040E1C69AF9A0068E855 /* DSAATests */,
+				958F04011C69AF9A0068E855 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		958F04011C69AF9A0068E855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				958F04001C69AF9A0068E855 /* DSAA.framework */,
+				958F040A1C69AF9A0068E855 /* DSAATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		958F04021C69AF9A0068E855 /* DSAA */ = {
+			isa = PBXGroup;
+			children = (
+				958F04031C69AF9A0068E855 /* DSAA.h */,
+				958F04051C69AF9A0068E855 /* Info.plist */,
+			);
+			path = DSAA;
+			sourceTree = "<group>";
+		};
+		958F040E1C69AF9A0068E855 /* DSAATests */ = {
+			isa = PBXGroup;
+			children = (
+				958F040F1C69AF9A0068E855 /* DSAATests.swift */,
+				958F04111C69AF9A0068E855 /* Info.plist */,
+			);
+			path = DSAATests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		958F03FD1C69AF9A0068E855 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958F04041C69AF9A0068E855 /* DSAA.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		958F03FF1C69AF9A0068E855 /* DSAA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 958F04141C69AF9A0068E855 /* Build configuration list for PBXNativeTarget "DSAA" */;
+			buildPhases = (
+				958F03FB1C69AF9A0068E855 /* Sources */,
+				958F03FC1C69AF9A0068E855 /* Frameworks */,
+				958F03FD1C69AF9A0068E855 /* Headers */,
+				958F03FE1C69AF9A0068E855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSAA;
+			productName = DSAA;
+			productReference = 958F04001C69AF9A0068E855 /* DSAA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		958F04091C69AF9A0068E855 /* DSAATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 958F04171C69AF9A0068E855 /* Build configuration list for PBXNativeTarget "DSAATests" */;
+			buildPhases = (
+				958F04061C69AF9A0068E855 /* Sources */,
+				958F04071C69AF9A0068E855 /* Frameworks */,
+				958F04081C69AF9A0068E855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				958F040D1C69AF9A0068E855 /* PBXTargetDependency */,
+			);
+			name = DSAATests;
+			productName = DSAATests;
+			productReference = 958F040A1C69AF9A0068E855 /* DSAATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		958F03F71C69AF9A0068E855 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Eneko Alonso";
+				TargetAttributes = {
+					958F03FF1C69AF9A0068E855 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					958F04091C69AF9A0068E855 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 958F03FA1C69AF9A0068E855 /* Build configuration list for PBXProject "DSAA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 958F03F61C69AF9A0068E855;
+			productRefGroup = 958F04011C69AF9A0068E855 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				958F03FF1C69AF9A0068E855 /* DSAA */,
+				958F04091C69AF9A0068E855 /* DSAATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		958F03FE1C69AF9A0068E855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		958F04081C69AF9A0068E855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		958F03FB1C69AF9A0068E855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		958F04061C69AF9A0068E855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958F04101C69AF9A0068E855 /* DSAATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		958F040D1C69AF9A0068E855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 958F03FF1C69AF9A0068E855 /* DSAA */;
+			targetProxy = 958F040C1C69AF9A0068E855 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		958F04121C69AF9A0068E855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		958F04131C69AF9A0068E855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		958F04151C69AF9A0068E855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DSAA/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enekoalonso.DSAA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		958F04161C69AF9A0068E855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DSAA/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enekoalonso.DSAA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		958F04181C69AF9A0068E855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DSAATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enekoalonso.DSAATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		958F04191C69AF9A0068E855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DSAATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enekoalonso.DSAATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		958F03FA1C69AF9A0068E855 /* Build configuration list for PBXProject "DSAA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958F04121C69AF9A0068E855 /* Debug */,
+				958F04131C69AF9A0068E855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		958F04141C69AF9A0068E855 /* Build configuration list for PBXNativeTarget "DSAA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958F04151C69AF9A0068E855 /* Debug */,
+				958F04161C69AF9A0068E855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		958F04171C69AF9A0068E855 /* Build configuration list for PBXNativeTarget "DSAATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958F04181C69AF9A0068E855 /* Debug */,
+				958F04191C69AF9A0068E855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 958F03F71C69AF9A0068E855 /* Project object */;
+}
