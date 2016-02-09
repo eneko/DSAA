@@ -48,11 +48,18 @@ public struct Heap<T:Comparable> {
     }
 
     /// Remove first element from the heap
-    public mutating func removeMin() -> T? {
-        let min = heap.first
+    /// - returns: the first item on the heap (Max or Min) or nil if empty
+    public mutating func remove() -> T? {
+        if isEmpty() {
+            return nil
+        }
+        if heap.count == 1 {
+            return heap.removeFirst()
+        }
+        let item = heap.first
+        heap[0] = heap.removeLast()
         reheap(0)
-        heap.removeLast()
-        return min
+        return item
     }
 
     /// Check if the heap contains any items
@@ -63,17 +70,25 @@ public struct Heap<T:Comparable> {
     }
 
     mutating func reheap(index: Int) {
-        let leftChildIndex = Int(pow(2.0, Double(index))) + 1
+        let leftChildIndex = 2 * index + 1
         if leftChildIndex >= heap.count {
             return
         }
         var swapIndex = leftChildIndex
-        let rightChildIndex = Int(pow(2.0, Double(index))) + 2
-        if rightChildIndex < heap.count && heap[rightChildIndex] < heap[leftChildIndex] {
-            swapIndex = rightChildIndex
+        let rightChildIndex = 2 * index + 2
+        if rightChildIndex < heap.count &&
+            isMinAndGreaterOrMaxAndLesser(leftChildIndex, indexB: rightChildIndex) {
+                swapIndex = rightChildIndex
         }
-        heap[index] = heap[swapIndex]
-        reheap(swapIndex)
+        if isMinAndGreaterOrMaxAndLesser(index, indexB: swapIndex) {
+                swap(&heap[index], &heap[swapIndex])
+                reheap(swapIndex)
+        }
     }
-    
+
+    func isMinAndGreaterOrMaxAndLesser(indexA: Int, indexB: Int) -> Bool {
+        return order == .Min && heap[indexA] > heap[indexB] ||
+                order == .Max && heap[indexA] < heap[indexB]
+    }
+
 }

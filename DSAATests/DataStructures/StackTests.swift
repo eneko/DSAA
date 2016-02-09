@@ -11,7 +11,7 @@ import XCTest
 
 class StackTests: XCTestCase {
 
-    let itemCount = 100000
+    let itemCount = 1000
 
     func testIntStack() {
         var stack = Stack<Int>()
