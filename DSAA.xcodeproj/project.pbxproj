@@ -13,6 +13,8 @@
 		958F041F1C69B0080068E855 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041E1C69B0080068E855 /* StackTests.swift */; };
 		958F04211C69B8370068E855 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04201C69B8370068E855 /* Heap.swift */; };
 		958F04231C69C6C60068E855 /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04221C69C6C60068E855 /* HeapTests.swift */; };
+		958F043A1C6A53AD0068E855 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04391C6A53AD0068E855 /* PriorityQueue.swift */; };
+		958F043C1C6A54CD0068E855 /* PriorityQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F043B1C6A54CD0068E855 /* PriorityQueueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		958F041E1C69B0080068E855 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackTests.swift; path = DataStructures/StackTests.swift; sourceTree = "<group>"; };
 		958F04201C69B8370068E855 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Heap.swift; path = DataStructures/Heap.swift; sourceTree = "<group>"; };
 		958F04221C69C6C60068E855 /* HeapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapTests.swift; path = DataStructures/HeapTests.swift; sourceTree = "<group>"; };
+		958F04391C6A53AD0068E855 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriorityQueue.swift; path = DataStructures/PriorityQueue.swift; sourceTree = "<group>"; };
+		958F043B1C6A54CD0068E855 /* PriorityQueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriorityQueueTests.swift; path = DataStructures/PriorityQueueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,9 @@
 		958F041C1C69AFE00068E855 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				958F041A1C69AFDD0068E855 /* Stack.swift */,
 				958F04201C69B8370068E855 /* Heap.swift */,
+				958F04391C6A53AD0068E855 /* PriorityQueue.swift */,
+				958F041A1C69AFDD0068E855 /* Stack.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -105,8 +110,9 @@
 		958F041D1C69AFEE0068E855 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				958F041E1C69B0080068E855 /* StackTests.swift */,
 				958F04221C69C6C60068E855 /* HeapTests.swift */,
+				958F043B1C6A54CD0068E855 /* PriorityQueueTests.swift */,
+				958F041E1C69B0080068E855 /* StackTests.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 			files = (
 				958F041B1C69AFDD0068E855 /* Stack.swift in Sources */,
 				958F04211C69B8370068E855 /* Heap.swift in Sources */,
+				958F043A1C6A53AD0068E855 /* PriorityQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 			files = (
 				958F041F1C69B0080068E855 /* StackTests.swift in Sources */,
 				958F04231C69C6C60068E855 /* HeapTests.swift in Sources */,
+				958F043C1C6A54CD0068E855 /* PriorityQueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
