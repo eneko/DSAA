@@ -12,7 +12,7 @@ public enum HeapOrder {
     case Max
 }
 
-/// Heap is an Abstract Data Structure
+/// Heap is an Abstract Data Type
 ///
 /// Order is preserved during insertion and removal of items.
 public struct Heap<T:Comparable> {

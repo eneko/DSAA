@@ -6,7 +6,7 @@
 //  Copyright © 2016 Eneko Alonso. All rights reserved.
 //
 
-/// Stack is an Abstract Data Structure
+/// Stack is an Abstract Data Type
 ///
 /// Items are returned in LIFO order (last in, first out)
 public struct Stack<T> {

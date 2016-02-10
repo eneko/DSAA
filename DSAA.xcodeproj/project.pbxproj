@@ -15,6 +15,8 @@
 		958F04431C6A5B140068E855 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04401C6A5B140068E855 /* Heap.swift */; };
 		958F04441C6A5B140068E855 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04411C6A5B140068E855 /* PriorityQueue.swift */; };
 		958F04451C6A5B140068E855 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04421C6A5B140068E855 /* Stack.swift */; };
+		959A94611C6AD8E7009C47A3 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A94601C6AD8E7009C47A3 /* HeapSort.swift */; };
+		959A94641C6ADB9E009C47A3 /* HeapSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A94631C6ADB9E009C47A3 /* HeapSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		958F04401C6A5B140068E855 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		958F04411C6A5B140068E855 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		958F04421C6A5B140068E855 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		959A94601C6AD8E7009C47A3 /* HeapSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapSort.swift; path = Algorithms/HeapSort.swift; sourceTree = "<group>"; };
+		959A94631C6ADB9E009C47A3 /* HeapSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapSortTests.swift; path = Algorithms/HeapSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,8 @@
 		958F03F61C69AF9A0068E855 = {
 			isa = PBXGroup;
 			children = (
-				958F043E1C6A5B140068E855 /* Sources */,
 				958F043D1C6A55B20068E855 /* DSAA.podspec */,
+				958F043E1C6A5B140068E855 /* Sources */,
 				958F04021C69AF9A0068E855 /* DSAA */,
 				958F040E1C69AF9A0068E855 /* DSAATests */,
 				958F04011C69AF9A0068E855 /* Products */,
@@ -93,6 +97,7 @@
 		958F040E1C69AF9A0068E855 /* DSAATests */ = {
 			isa = PBXGroup;
 			children = (
+				959A94621C6ADB83009C47A3 /* Algorithms */,
 				958F041D1C69AFEE0068E855 /* DataStructures */,
 				958F04111C69AF9A0068E855 /* Info.plist */,
 			);
@@ -112,6 +117,7 @@
 		958F043E1C6A5B140068E855 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				959A945F1C6AD826009C47A3 /* Algorithms */,
 				958F043F1C6A5B140068E855 /* DataStructures */,
 			);
 			path = Sources;
@@ -125,6 +131,22 @@
 				958F04421C6A5B140068E855 /* Stack.swift */,
 			);
 			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		959A945F1C6AD826009C47A3 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				959A94601C6AD8E7009C47A3 /* HeapSort.swift */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		959A94621C6ADB83009C47A3 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				959A94631C6ADB9E009C47A3 /* HeapSortTests.swift */,
+			);
+			name = Algorithms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,7 @@
 				958F04441C6A5B140068E855 /* PriorityQueue.swift in Sources */,
 				958F04451C6A5B140068E855 /* Stack.swift in Sources */,
 				958F04431C6A5B140068E855 /* Heap.swift in Sources */,
+				959A94611C6AD8E7009C47A3 /* HeapSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +271,7 @@
 				958F041F1C69B0080068E855 /* StackTests.swift in Sources */,
 				958F04231C69C6C60068E855 /* HeapTests.swift in Sources */,
 				958F043C1C6A54CD0068E855 /* PriorityQueueTests.swift in Sources */,
+				959A94641C6ADB9E009C47A3 /* HeapSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
