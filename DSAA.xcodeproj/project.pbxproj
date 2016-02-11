@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		958058D91C6D01F800F4877B /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958058D81C6D01F800F4877B /* List.swift */; };
+		958058DD1C6D048F00F4877B /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958058DC1C6D048F00F4877B /* ListTests.swift */; };
 		958F04041C69AF9A0068E855 /* DSAA.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F04031C69AF9A0068E855 /* DSAA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		958F040B1C69AF9A0068E855 /* DSAA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958F04001C69AF9A0068E855 /* DSAA.framework */; };
 		958F041F1C69B0080068E855 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F041E1C69B0080068E855 /* StackTests.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		958058D81C6D01F800F4877B /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		958058DC1C6D048F00F4877B /* ListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTests.swift; path = DataStructures/ListTests.swift; sourceTree = "<group>"; };
 		958F04001C69AF9A0068E855 /* DSAA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSAA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		958F04031C69AF9A0068E855 /* DSAA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAA.h; sourceTree = "<group>"; };
 		958F04051C69AF9A0068E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				958F04221C69C6C60068E855 /* HeapTests.swift */,
+				958058DC1C6D048F00F4877B /* ListTests.swift */,
 				958F043B1C6A54CD0068E855 /* PriorityQueueTests.swift */,
 				958F041E1C69B0080068E855 /* StackTests.swift */,
 			);
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				958F04401C6A5B140068E855 /* Heap.swift */,
+				958058D81C6D01F800F4877B /* List.swift */,
 				958F04411C6A5B140068E855 /* PriorityQueue.swift */,
 				958F04421C6A5B140068E855 /* Stack.swift */,
 			);
@@ -260,6 +266,7 @@
 				958F04441C6A5B140068E855 /* PriorityQueue.swift in Sources */,
 				958F04451C6A5B140068E855 /* Stack.swift in Sources */,
 				958F04431C6A5B140068E855 /* Heap.swift in Sources */,
+				958058D91C6D01F800F4877B /* List.swift in Sources */,
 				959A94611C6AD8E7009C47A3 /* HeapSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +279,7 @@
 				958F04231C69C6C60068E855 /* HeapTests.swift in Sources */,
 				958F043C1C6A54CD0068E855 /* PriorityQueueTests.swift in Sources */,
 				959A94641C6ADB9E009C47A3 /* HeapSortTests.swift in Sources */,
+				958058DD1C6D048F00F4877B /* ListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
