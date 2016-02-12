@@ -26,6 +26,146 @@ class ListTests: XCTestCase {
         XCTAssertNil(list.first())
     }
 
+    func testEmptyLast() {
+        let list = List<Int>()
+        XCTAssertNil(list.last())
+    }
+
+    func testInsert() {
+        var list = List<Int>()
+        list.insertAt(0, element: 1)
+        list.insertAt(0, element: 2)
+        list.insertAt(0, element: 3)
+        XCTAssertEqual(list.first(), 3)
+        XCTAssertEqual(list.elementAt(0), 3)
+        XCTAssertEqual(list.elementAt(1), 2)
+        XCTAssertEqual(list.elementAt(2), 1)
+    }
+
+    func testInsertMiddle() {
+        var list = List<Int>()
+        list.insertAt(0, element: 1)
+        list.insertAt(1, element: 2)
+        list.insertAt(1, element: 3)
+        XCTAssertEqual(list.first(), 1)
+        XCTAssertEqual(list.elementAt(0), 1)
+        XCTAssertEqual(list.elementAt(1), 3)
+        XCTAssertEqual(list.elementAt(2), 2)
+    }
+
+    func testInsertAtEnd() {
+        var list = List<Int>()
+        list.insertAt(0, element: 1)
+        list.insertAt(1, element: 2)
+        list.insertAt(2, element: 3)
+        XCTAssertEqual(list.first(), 1)
+        XCTAssertEqual(list.elementAt(0), 1)
+        XCTAssertEqual(list.elementAt(1), 2)
+        XCTAssertEqual(list.elementAt(2), 3)
+    }
+
+    func testEmptyRemoveFirst() {
+        var list = List<Int>()
+        XCTAssertNil(list.removeFirst())
+    }
+
+    func testRemoveFirst() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        list.append(5)
+        list.append(8)
+        XCTAssertEqual(list.removeFirst(), 1)
+        XCTAssertEqual(list.removeFirst(), 1)
+        XCTAssertEqual(list.removeFirst(), 2)
+        XCTAssertEqual(list.removeFirst(), 3)
+        XCTAssertEqual(list.removeFirst(), 5)
+        XCTAssertEqual(list.removeFirst(), 8)
+        XCTAssertNil(list.removeFirst())
+    }
+
+    func testEmptyRemoveLast() {
+        var list = List<Int>()
+        XCTAssertNil(list.removeLast())
+    }
+
+    func testRemoveLast() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        list.append(5)
+        list.append(8)
+        XCTAssertEqual(list.removeLast(), 8)
+        XCTAssertEqual(list.removeLast(), 5)
+        XCTAssertEqual(list.removeLast(), 3)
+        XCTAssertEqual(list.removeLast(), 2)
+        XCTAssertEqual(list.removeLast(), 1)
+        XCTAssertEqual(list.removeLast(), 1)
+        XCTAssertNil(list.removeLast())
+    }
+
+    func testRemoveAt() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        XCTAssertEqual(list.removeAt(0), 1)
+        XCTAssertEqual(list.removeAt(1), 3)
+        XCTAssertEqual(list.removeAt(0), 2)
+        XCTAssertNil(list.removeAt(1))
+    }
+
+    func testRemoveAtEmpty() {
+        var list = List<Int>()
+        XCTAssertNil(list.removeAt(0))
+    }
+
+    func testCompareEqualLists() {
+        var listA = List<Int>()
+        listA.append(1)
+        listA.append(2)
+        listA.append(3)
+        listA.append(4)
+        var listB = List<Int>()
+        listB.insertAt(0, element: 4)
+        listB.insertAt(0, element: 3)
+        listB.insertAt(0, element: 2)
+        listB.insertAt(0, element: 1)
+        XCTAssertEqual(listA, listB)
+    }
+
+    func testCompareDifferentValueLists() {
+        var listA = List<Int>()
+        listA.append(1)
+        listA.append(2)
+        listA.append(3)
+        listA.append(4)
+        var listB = List<Int>()
+        listB.insertAt(0, element: 4)
+        listB.insertAt(0, element: 4)
+        listB.insertAt(0, element: 4)
+        listB.insertAt(0, element: 4)
+        XCTAssertNotEqual(listA, listB)
+    }
+
+    func testCompareDifferentLengthLists() {
+        var listA = List<Int>()
+        listA.append(1)
+        listA.append(2)
+        listA.append(3)
+        listA.append(4)
+        var listB = List<Int>()
+        listB.append(1)
+        listB.append(2)
+        listB.append(3)
+        XCTAssertNotEqual(listA, listB)
+    }
+
+
     /// Find last element on a list
     /// Source: Problem 1, 99-scala problems (http://aperiodic.net/phil/scala/s-99)
     func testFindLast() {
@@ -50,7 +190,7 @@ class ListTests: XCTestCase {
         list.append(5)
         list.append(8)
         let count = list.count()
-        XCTAssertEqual(list.itemAt(count - 2), 5)
+        XCTAssertEqual(list.elementAt(count - 2), 5)
     }
 
     /// Find the nth element on a list
@@ -63,7 +203,9 @@ class ListTests: XCTestCase {
         list.append(3)
         list.append(5)
         list.append(8)
-        XCTAssertEqual(list.itemAt(2), 2)
+        XCTAssertEqual(list.elementAt(2), 2)
+        XCTAssertEqual(list.elementAt(5), 8)
+        XCTAssertNil(list.elementAt(6))
     }
 
     /// Find the number of elements on a list
@@ -90,12 +232,25 @@ class ListTests: XCTestCase {
         list.append(5)
         list.append(8)
         list.reverse()
-        XCTAssertEqual(list.itemAt(0), 8)
-        XCTAssertEqual(list.itemAt(1), 5)
-        XCTAssertEqual(list.itemAt(2), 3)
-        XCTAssertEqual(list.itemAt(3), 2)
-        XCTAssertEqual(list.itemAt(4), 1)
-        XCTAssertEqual(list.itemAt(5), 1)
+        XCTAssertEqual(list.elementAt(0), 8)
+        XCTAssertEqual(list.elementAt(1), 5)
+        XCTAssertEqual(list.elementAt(2), 3)
+        XCTAssertEqual(list.elementAt(3), 2)
+        XCTAssertEqual(list.elementAt(4), 1)
+        XCTAssertEqual(list.elementAt(5), 1)
+    }
+
+    func testReverseEmpty() {
+        var list = List<Int>()
+        list.reverse()
+        XCTAssertNil(list.first())
+    }
+
+    func testReverseOne() {
+        var list = List<Int>()
+        list.append(1)
+        list.reverse()
+        XCTAssertEqual(list.first(), 1)
     }
 
     func testPalindrome() {

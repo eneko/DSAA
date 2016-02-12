@@ -21,7 +21,7 @@ class Item<T> {
 
 }
 
-public struct List<T> {
+public struct List<T: Equatable> : Equatable {
 
     var firstItem: Item<T>?
 
@@ -33,14 +33,22 @@ public struct List<T> {
         while true {
             guard let next = item.next else {
                 item.next = Item<T>(value: element)
-                return
+                break
             }
             item = next
         }
     }
 
     public mutating func insertAt(index: UInt, element: T) {
-
+        if index == 0 {
+            let newItem = Item<T>(value: element)
+            newItem.next = firstItem
+            firstItem = newItem
+        } else if let item = itemAt(index - 1) {
+            let newItem = Item<T>(value: element)
+            newItem.next = item.next
+            item.next = newItem
+        }
     }
 
     public func first() -> T? {
@@ -51,15 +59,18 @@ public struct List<T> {
         guard var item = firstItem else {
             return nil
         }
+        var value: T? = nil
         while true {
             guard let next = item.next else {
-                return item.value
+                value = item.value
+                break
             }
             item = next
         }
+        return value
     }
 
-    public func itemAt(index: UInt) -> T? {
+    func itemAt(index: UInt) -> Item<T>? {
         var current: UInt = 0
         var item = firstItem
         while current < index {
@@ -69,19 +80,47 @@ public struct List<T> {
             item = next
             current++
         }
-        return item?.value
+        return item
+    }
+
+    public func elementAt(index: UInt) -> T? {
+        return itemAt(index)?.value
     }
 
     public mutating func removeFirst() -> T? {
-        return nil
+        let value = firstItem?.value
+        firstItem = firstItem?.next
+        return value
     }
 
     public mutating func removeLast() -> T? {
-        return nil
+        if firstItem?.next == nil {
+            let value = firstItem?.value
+            firstItem = nil
+            return value
+        }
+
+        var item = firstItem
+        var value: T? = nil
+        while true {
+            if item?.next?.next == nil {
+                value = item?.next?.value
+                item?.next = nil
+                break
+            }
+            item = item?.next
+        }
+        return value
     }
 
-    public mutating func removeAt(index: Int) -> T? {
-        return nil
+    public mutating func removeAt(index: UInt) -> T? {
+        if index == 0 {
+            return removeFirst()
+        }
+        let item = itemAt(index - 1)
+        let value = item?.next?.value
+        item?.next = item?.next?.next
+        return value
     }
 
     public func count() -> UInt {
@@ -91,11 +130,12 @@ public struct List<T> {
         var count: UInt = 1
         while true {
             guard let next = item.next else {
-                return count
+                break
             }
             item = next
             count++
         }
+        return count
     }
 
     public func isEmpty() -> Bool {
@@ -110,7 +150,7 @@ public struct List<T> {
         while true {
             guard let next = item.next else {
                 firstItem = head
-                return
+                break
             }
             item.next = next.next
             next.next = head
@@ -120,10 +160,6 @@ public struct List<T> {
 
 }
 
-//public extension List : Equatable where T:Equatable {
-//
-//}
-
 public func == <T: Equatable> (lhs: List<T>, rhs: List<T>) -> Bool {
     let leftCount = lhs.count()
     let rightCount = rhs.count()
@@ -131,7 +167,7 @@ public func == <T: Equatable> (lhs: List<T>, rhs: List<T>) -> Bool {
         return false
     }
     for i in 0..<leftCount {
-        if lhs.itemAt(i) != rhs.itemAt(i) {
+        if lhs.elementAt(i) != rhs.elementAt(i) {
             return false
         }
     }
