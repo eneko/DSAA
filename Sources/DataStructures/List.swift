@@ -119,3 +119,21 @@ public struct List<T> {
     }
 
 }
+
+//public extension List : Equatable where T:Equatable {
+//
+//}
+
+public func == <T: Equatable> (lhs: List<T>, rhs: List<T>) -> Bool {
+    let leftCount = lhs.count()
+    let rightCount = rhs.count()
+    if leftCount != rightCount {
+        return false
+    }
+    for i in 0..<leftCount {
+        if lhs.itemAt(i) != rhs.itemAt(i) {
+            return false
+        }
+    }
+    return true
+}

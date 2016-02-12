@@ -79,6 +79,8 @@ class ListTests: XCTestCase {
         XCTAssertEqual(list.count(), 6)
     }
 
+    /// Reverse a list
+    /// Source: Problem 5, 99-scala problems (http://aperiodic.net/phil/scala/s-99)
     func testReverse() {
         var list = List<Int>()
         list.append(1)
@@ -95,5 +97,16 @@ class ListTests: XCTestCase {
         XCTAssertEqual(list.itemAt(4), 1)
         XCTAssertEqual(list.itemAt(5), 1)
     }
+
+    func testPalindrome() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        list.append(2)
+        list.append(1)
+
+    }
+
 
 }
