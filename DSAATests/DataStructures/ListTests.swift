@@ -253,6 +253,24 @@ class ListTests: XCTestCase {
         XCTAssertEqual(list.first(), 1)
     }
 
+    func testCopyEmpty() {
+        let list = List<Int>()
+        XCTAssertEqual(list, list.copy())
+    }
+
+    func testCopy() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        list.append(5)
+        list.append(8)
+        XCTAssertEqual(list, list.copy())
+    }
+
+    /// Find out whether a list is a palindrome
+    /// Source: Problem 6, 99-scala problems (http://aperiodic.net/phil/scala/s-99)
     func testPalindrome() {
         var list = List<Int>()
         list.append(1)
@@ -260,7 +278,21 @@ class ListTests: XCTestCase {
         list.append(3)
         list.append(2)
         list.append(1)
+        var copy = list.copy()
+        copy.reverse()
+        XCTAssertEqual(list, copy)
+    }
 
+    func testNotPalindrome() {
+        var list = List<Int>()
+        list.append(1)
+        list.append(2)
+        list.append(3)
+        list.append(2)
+        list.append(2)
+        var copy = list.copy()
+        copy.reverse()
+        XCTAssertNotEqual(list, copy)
     }
 
 

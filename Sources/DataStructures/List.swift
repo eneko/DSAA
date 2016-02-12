@@ -158,6 +158,16 @@ public struct List<T: Equatable> : Equatable {
         }
     }
 
+    public func copy() -> List<T> {
+        var newList = List<T>()
+        var item = firstItem
+        while let value = item?.value {
+            newList.append(value)
+            item = item?.next
+        }
+        return newList
+    }
+
 }
 
 public func == <T: Equatable> (lhs: List<T>, rhs: List<T>) -> Bool {
