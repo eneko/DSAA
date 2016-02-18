@@ -19,6 +19,8 @@
 		958F04451C6A5B140068E855 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F04421C6A5B140068E855 /* Stack.swift */; };
 		959A94611C6AD8E7009C47A3 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A94601C6AD8E7009C47A3 /* HeapSort.swift */; };
 		959A94641C6ADB9E009C47A3 /* HeapSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A94631C6ADB9E009C47A3 /* HeapSortTests.swift */; };
+		95A6F5141C756FA60070ACF4 /* StreamMedian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A6F5131C756FA60070ACF4 /* StreamMedian.swift */; };
+		95C8C98E1C757EAC00F0F398 /* StreamMedianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C98D1C757EAC00F0F398 /* StreamMedianTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		958F04421C6A5B140068E855 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		959A94601C6AD8E7009C47A3 /* HeapSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapSort.swift; path = Algorithms/HeapSort.swift; sourceTree = "<group>"; };
 		959A94631C6ADB9E009C47A3 /* HeapSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeapSortTests.swift; path = Algorithms/HeapSortTests.swift; sourceTree = "<group>"; };
+		95A6F5131C756FA60070ACF4 /* StreamMedian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamMedian.swift; sourceTree = "<group>"; };
+		95C8C98D1C757EAC00F0F398 /* StreamMedianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamMedianTests.swift; path = DataStructures/StreamMedianTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				958058DC1C6D048F00F4877B /* ListTests.swift */,
 				958F043B1C6A54CD0068E855 /* PriorityQueueTests.swift */,
 				958F041E1C69B0080068E855 /* StackTests.swift */,
+				95C8C98D1C757EAC00F0F398 /* StreamMedianTests.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				958058D81C6D01F800F4877B /* List.swift */,
 				958F04411C6A5B140068E855 /* PriorityQueue.swift */,
 				958F04421C6A5B140068E855 /* Stack.swift */,
+				95A6F5131C756FA60070ACF4 /* StreamMedian.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				958F04441C6A5B140068E855 /* PriorityQueue.swift in Sources */,
 				958F04451C6A5B140068E855 /* Stack.swift in Sources */,
 				958F04431C6A5B140068E855 /* Heap.swift in Sources */,
+				95A6F5141C756FA60070ACF4 /* StreamMedian.swift in Sources */,
 				958058D91C6D01F800F4877B /* List.swift in Sources */,
 				959A94611C6AD8E7009C47A3 /* HeapSort.swift in Sources */,
 			);
@@ -276,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958F041F1C69B0080068E855 /* StackTests.swift in Sources */,
+				95C8C98E1C757EAC00F0F398 /* StreamMedianTests.swift in Sources */,
 				958F04231C69C6C60068E855 /* HeapTests.swift in Sources */,
 				958F043C1C6A54CD0068E855 /* PriorityQueueTests.swift in Sources */,
 				959A94641C6ADB9E009C47A3 /* HeapSortTests.swift in Sources */,

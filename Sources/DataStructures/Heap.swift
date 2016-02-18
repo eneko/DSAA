@@ -21,7 +21,6 @@ public struct Heap<T:Comparable> {
     var order: HeapOrder
 
     /// Instantiate a new Heap
-    ///
     /// - parameter order: Indicates if the heap should be Max or Min
     public init(order: HeapOrder) {
         heap = []
@@ -30,7 +29,6 @@ public struct Heap<T:Comparable> {
 
     /// Add an item to the heap
     /// - complexity: O(log n)
-    ///
     /// - parameter item: item to be added
     public mutating func insert(item: T) {
         var index = heap.count
@@ -48,6 +46,7 @@ public struct Heap<T:Comparable> {
     }
 
     /// Remove first element from the heap
+    /// - complexity: O(log n)
     /// - returns: the first item on the heap (Max or Min) or nil if empty
     public mutating func remove() -> T? {
         if isEmpty() {
@@ -62,11 +61,24 @@ public struct Heap<T:Comparable> {
         return item
     }
 
+    /// Returns the first element if any without removing it
+    /// - complexity: O(1)
+    /// - returns: first element of the heap, if any
+    public var first: T? {
+        return heap.first
+    }
+
     /// Check if the heap contains any items
     ///
     /// - returns: true if the heap is empty
     public func isEmpty() -> Bool {
         return heap.count == 0
+    }
+
+    /// Return the number of elements in the Heap
+    /// - returns: number of elements
+    public var count: Int {
+        return heap.count
     }
 
     mutating func reheap(index: Int) {
@@ -81,14 +93,14 @@ public struct Heap<T:Comparable> {
                 swapIndex = rightChildIndex
         }
         if isMinAndGreaterOrMaxAndLesser(index, indexB: swapIndex) {
-                swap(&heap[index], &heap[swapIndex])
-                reheap(swapIndex)
+            swap(&heap[index], &heap[swapIndex])
+            reheap(swapIndex)
         }
     }
 
     func isMinAndGreaterOrMaxAndLesser(indexA: Int, indexB: Int) -> Bool {
         return order == .Min && heap[indexA] > heap[indexB] ||
-                order == .Max && heap[indexA] < heap[indexB]
+            order == .Max && heap[indexA] < heap[indexB]
     }
-
+    
 }

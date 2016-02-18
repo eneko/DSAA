@@ -24,12 +24,20 @@ public struct PriorityQueue<T: Comparable> {
         queue.insert(item)
     }
 
+    public func peek() -> T? {
+        return queue.first
+    }
+
     public mutating func remove() -> T? {
         return queue.remove()
     }
 
     public func isEmpty() -> Bool {
         return queue.isEmpty()
+    }
+
+    public var count: Int {
+        return queue.count
     }
 
 }
